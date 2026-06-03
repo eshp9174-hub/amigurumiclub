@@ -1,1 +1,228 @@
-asd
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amigurumi Club</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,sans-serif;background:#fff7f8;color:#3c2929}
+    img{max-width:100%;display:block}
+    .wrap{max-width:1180px;margin:auto;padding:22px}
+    .hero{text-align:center;padding:34px 16px 20px;background:linear-gradient(180deg,#ffe8ee,#fff7f8)}
+    .logo{width:130px;margin:0 auto 12px;border-radius:28px}
+    .tag{display:inline-block;background:#fff;border:1px solid #ffd0dc;color:#b94868;padding:8px 14px;border-radius:999px;font-weight:700;font-size:13px}
+    h1{font-size:38px;line-height:1.05;margin:16px auto 12px;max-width:850px;color:#4b2b2b}
+    .sub{font-size:19px;max-width:760px;margin:auto;color:#6b4b4b;line-height:1.5}
+    .btn{border:0;background:linear-gradient(135deg,#ff5f91,#e83f78);color:white;font-size:20px;font-weight:900;padding:18px 28px;border-radius:18px;box-shadow:0 12px 25px #e83f7838;cursor:pointer;text-decoration:none;display:inline-block;margin-top:20px}
+    .price{font-size:18px;margin-top:10px;color:#7a4b4b}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}
+    .grid img{height:230px;width:100%;object-fit:cover;border-radius:18px;background:#fff;box-shadow:0 8px 20px #00000010}
+    .section{padding:32px 0;text-align:center}
+    .section h2{font-size:30px;margin:0 0 10px;color:#4b2b2b}
+    .section p{font-size:18px;color:#6b4b4b;line-height:1.5;max-width:760px;margin:0 auto 18px}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+    .card{background:#fff;border:1px solid #ffe0e7;padding:18px;border-radius:20px;box-shadow:0 8px 20px #00000008;font-weight:800;color:#704242}
+    .benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;text-align:left;margin-top:22px}
+    .benefit{background:#fff;border-radius:20px;padding:18px;border:1px solid #ffe0e7;font-size:17px;line-height:1.45}
+    .offer{background:#fff;border:2px solid #ff9fba;border-radius:28px;padding:28px;margin:28px auto;max-width:760px;box-shadow:0 12px 35px #e83f7815}
+    .offer h2{font-size:32px}
+    .bigprice{font-size:52px;font-weight:900;color:#e83f78;margin:8px 0}
+    .old{text-decoration:line-through;color:#9b7777}
+    .footer{text-align:center;padding:32px;color:#7a5555}
+    .sticky{position:fixed;bottom:0;left:0;right:0;background:#fff;padding:10px 14px;box-shadow:0 -8px 25px #00000015;z-index:9;text-align:center}
+    .sticky button{margin:0;padding:14px 22px;font-size:17px}
+    .modal{display:none;position:fixed;inset:0;background:#00000080;z-index:99;align-items:center;justify-content:center;padding:16px}
+    .modal.show{display:flex}
+    .modalbox{background:#fff7f8;max-width:760px;width:100%;max-height:92vh;overflow:auto;border-radius:28px;padding:24px;text-align:center;position:relative}
+    .close{position:absolute;right:18px;top:14px;background:#fff;border:0;border-radius:50%;font-size:24px;width:38px;height:38px;cursor:pointer}
+    .modalbox h2{font-size:31px;margin:12px 0;color:#4b2b2b}
+    .modalprice{font-size:54px;color:#e83f78;font-weight:900}
+    .bonus{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;text-align:left;margin:18px 0}
+    .bonus div{background:#fff;border:1px solid #ffd8e2;border-radius:16px;padding:12px;font-weight:700}
+    .no{display:block;margin-top:14px;color:#7b5959;font-size:15px}
+    @media(max-width:760px){
+      h1{font-size:30px}
+      .sub{font-size:17px}
+      .grid{grid-template-columns:repeat(2,1fr);gap:9px}
+      .grid img{height:185px;border-radius:14px}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .benefits{grid-template-columns:1fr}
+      .bonus{grid-template-columns:1fr}
+      .wrap{padding:16px}
+      .section h2{font-size:25px}
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <img class="logo" src="https://amigurumiclub.vercel.app/img/logo.png" loading="eager" alt="Amigurumi Club">
+  <span class="tag">✨ Biblioteca viva e atualizada</span>
+  <h1>Mais de 5.000 receitas de amigurumi em uma plataforma linda e organizada</h1>
+  <p class="sub">
+    Receba acesso imediato diretamente no seu WhatsApp e encontre receitas fofas em segundos para criar, presentear ou até fazer renda extra em casa.
+  </p>
+  <button class="btn openModal">QUERO ACESSAR AGORA</button>
+  <div class="price">Acesso básico por apenas <b>R$10,00</b></div>
+</section>
+
+<div class="wrap">
+
+<section class="section">
+  <h2>💖 Veja algumas receitas da biblioteca</h2>
+  <p>Uma seleção cheia de ideias fofas, criativas e organizadas por categorias.</p>
+  <div class="grid">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami1.jpg">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami3.webp">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami4.webp">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami7.webp">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami10.webp">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami13.webp">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami18.webp">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami21.jpg">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami24.jpg">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami26.webp">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami31.webp">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami37.webp">
+  </div>
+</section>
+
+<section class="section">
+  <h2>✨ Categorias que você encontra</h2>
+  <div class="cards">
+    <div class="card">💖 Personagens fofos</div>
+    <div class="card">🌸 Flores</div>
+    <div class="card">🐻 Bichinhos</div>
+    <div class="card">👶 Baby</div>
+    <div class="card">🍓 Mini Foods</div>
+    <div class="card">🎁 Presentes</div>
+    <div class="card">🧸 Bonecas</div>
+    <div class="card">🔥 Tendências</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>🔥 Somente hoje adicionamos +97 novas receitas</h2>
+  <p>
+    Nossa biblioteca é constantemente atualizada com novas tendências, receitas virais e modelos mais procurados do momento.
+  </p>
+  <div class="grid">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami39.jpg">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami40.webp">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami42.jpg">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami43.webp">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami45.webp">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami48.webp">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami50.webp">
+    <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami55.webp">
+  </div>
+</section>
+
+<section class="section">
+  <h2>💖 Para criar, presentear ou vender</h2>
+  <p>
+    Muitas mulheres começaram fazendo amigurumi como hobby… e hoje usam suas peças para presentear pessoas queridas ou vender para amigas, encomendas, Instagram e Shopee.
+  </p>
+  <div class="benefits">
+    <div class="benefit">✨ Faça no seu tempo, como um momento de relaxamento e criatividade.</div>
+    <div class="benefit">🎁 Crie presentes únicos para filhos, netos, amigas e família.</div>
+    <div class="benefit">💰 Tenha ideias de peças fofas que podem virar renda extra.</div>
+    <div class="benefit">📲 Receba o acesso diretamente no WhatsApp, sem complicação.</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>❌ Chega de receitas perdidas</h2>
+  <p>
+    Nada de grupos bagunçados, links expirados, PDFs perdidos e horas procurando inspiração.
+    No Amigurumi Club tudo fica em um só lugar.
+  </p>
+</section>
+
+<section class="section">
+  <h2>📲 Como funciona?</h2>
+  <div class="cards">
+    <div class="card">1️⃣ Escolha seu acesso</div>
+    <div class="card">2️⃣ Receba no WhatsApp</div>
+    <div class="card">3️⃣ Entre na biblioteca</div>
+    <div class="card">4️⃣ Comece a criar</div>
+  </div>
+</section>
+
+<section class="offer">
+  <h2>💖 Acesso Básico</h2>
+  <p>Para quem quer começar hoje com uma biblioteca organizada.</p>
+  <div class="bigprice">R$10,00</div>
+  <p>
+    ✔ +5.000 receitas organizadas<br>
+    ✔ Acesso vitalício<br>
+    ✔ Plataforma simples<br>
+    ✔ Recebe direto no WhatsApp
+  </p>
+  <button class="btn openModal">QUERO ACESSAR AGORA</button>
+</section>
+
+<section class="section">
+  <h2>🔒 Compra segura</h2>
+  <p>
+    Pagamento seguro, acesso imediato, suporte via WhatsApp e biblioteca simples de acessar.
+  </p>
+</section>
+
+</div>
+
+<div class="sticky">
+  <button class="btn openModal">QUERO ACESSAR POR R$10</button>
+</div>
+
+<div class="modal" id="vipModal">
+  <div class="modalbox">
+    <button class="close" id="closeModal">×</button>
+
+    <h2>✨ Espere! Sua biblioteca pode ficar muito mais completa 💖</h2>
+    <p>Antes de continuar com o básico, desbloqueie o <b>VIP COMPLETO</b> com muito mais receitas, bônus e grupo exclusivo.</p>
+
+    <div class="modalprice">R$19,90</div>
+    <p><span class="old">De R$197</span> por apenas R$19,90</p>
+
+    <div class="grid">
+      <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami60.jpg">
+      <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami62.webp">
+      <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami63.webp">
+      <img loading="lazy" src="https://amigurumiclub.vercel.app/img/ami68.jpg">
+    </div>
+
+    <div class="bonus">
+      <div>🎁 +20.000 receitas extras</div>
+      <div>💬 Clube VIP no WhatsApp</div>
+      <div>🔥 Receitas virais atualizadas</div>
+      <div>🛍️ Ideias mais procuradas para vender</div>
+      <div>📘 Guia para vender amigurumi</div>
+      <div>🏷️ Etiquetas prontas</div>
+      <div>🎨 Catálogo editável Canva</div>
+      <div>🧶 Guia de fios e materiais</div>
+      <div>✨ Atualizações futuras VIP</div>
+      <div>💖 Novas inspirações frequentes</div>
+    </div>
+
+    <p><b>Oferta especial disponível apenas agora.</b></p>
+
+    <a class="btn" href="https://pay.cakto.com.br/n6bkpqc">SIM, QUERO O VIP POR R$19,90 💖</a>
+    <a class="no" href="https://pay.cakto.com.br/59biugy_911701">Não, quero continuar somente com o básico de R$10</a>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('vipModal');
+  document.querySelectorAll('.openModal').forEach(btn=>{
+    btn.addEventListener('click',()=>modal.classList.add('show'));
+  });
+  document.getElementById('closeModal').addEventListener('click',()=>modal.classList.remove('show'));
+  modal.addEventListener('click',e=>{
+    if(e.target===modal) modal.classList.remove('show');
+  });
+</script>
+
+</body>
+</html>
